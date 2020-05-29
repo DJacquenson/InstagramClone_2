@@ -25,6 +25,7 @@ import java.util.List;
  */
 public class PostsFragment extends Fragment {
 
+    public static final String TAG = "PostsFragment";
     private RecyclerView rvPosts;
     public PostsFragment() {
         // Required empty public constructor
@@ -48,6 +49,7 @@ public class PostsFragment extends Fragment {
         //2.create the data source
         //3.set the adapter on the recycler view
         //4.set the manager on the recycler view
+        queryPosts();
     }
 
     private void queryPosts() {
@@ -58,12 +60,12 @@ public class PostsFragment extends Fragment {
             @Override
             public void done(List<Post> posts, ParseException e) {
                 if (e != null){
-                    Log.e("TAG", "Issue with getting posts", e);
+                    Log.e(TAG, "Issue with getting posts", e);
                     return;
                 }
 
                 for(Post post : posts){
-                    Log.i("TAG", "Post: " + post.getDescription() + ", username: " + post.getUser().getUsername());
+                    Log.i(TAG, "Post: " + post.getDescription() + ", username: " + post.getUser().getUsername());
                 }
             }
         });
