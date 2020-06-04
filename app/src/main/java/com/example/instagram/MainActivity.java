@@ -37,6 +37,7 @@ import java.util.List;
 
 import fragments.ComposeFragment;
 import fragments.PostsFragment;
+import fragments.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "MainActivity";
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     default:
                         // TODO: update fragment
                         Toast.makeText(MainActivity.this, "Profile!", Toast.LENGTH_SHORT).show();
-                        fragment = new ComposeFragment();
+                        fragment = new ProfileFragment();
                         break;
                 }
                 fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();

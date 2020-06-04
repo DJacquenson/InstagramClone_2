@@ -27,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etPassword;
     private Button btnLogin;
     private Spinner spCountry1;
+    private Button btnSignup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,8 @@ public class LoginActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
         spCountry1 = findViewById(R.id.spCountry1);
+        btnSignup = findViewById(R.id.btnSignUp);
+
 
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
